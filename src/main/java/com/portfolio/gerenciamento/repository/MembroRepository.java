@@ -13,4 +13,3 @@ public interface MembroRepository extends JpaRepository<Membro, Long> {
 
     boolean existsByIdExterno(String idExterno);
 }
-
