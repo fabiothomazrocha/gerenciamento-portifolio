@@ -9,12 +9,15 @@ import java.time.temporal.ChronoUnit;
 
 
 @Component
-public class RiscoCalculator {
+public class CalculadorRisco {
 
     private static final BigDecimal LIMITE_BAIXO_RISCO = new BigDecimal("100000.00");
     private static final BigDecimal LIMITE_MEDIO_RISCO = new BigDecimal("500000.00");
     private static final long MESES_BAIXO_RISCO = 3L;
     private static final long MESES_MEDIO_RISCO = 6L;
+
+    public CalculadorRisco() {
+    }
 
     public ClassificacaoRisco calcular(BigDecimal orcamento, LocalDate dataInicio, LocalDate previsaoTermino) {
         long meses = ChronoUnit.MONTHS.between(dataInicio, previsaoTermino);

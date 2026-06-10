@@ -3,7 +3,7 @@ package com.portfolio.gerenciamento.mapper;
 import com.portfolio.gerenciamento.dto.request.ProjetoCriacaoRequest;
 import com.portfolio.gerenciamento.dto.response.ProjetoResponse;
 import com.portfolio.gerenciamento.entity.Projeto;
-import com.portfolio.gerenciamento.service.RiscoCalculator;
+import com.portfolio.gerenciamento.service.CalculadorRisco;
 import org.mapstruct.*;
 import org.springframework.beans.factory.annotation.Autowired;
 
@@ -11,9 +11,6 @@ import org.springframework.beans.factory.annotation.Autowired;
         uses = {MembroMapper.class},
         injectionStrategy = InjectionStrategy.CONSTRUCTOR)
 public abstract class ProjetoMapper {
-
-    @Autowired
-    protected RiscoCalculator riscoCalculator;
 
     @Mapping(target = "id", ignore = true)
     @Mapping(target = "status", ignore = true)
