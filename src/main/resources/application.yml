@@ -38,3 +38,4 @@ logging:
     com.portfolio: DEBUG
     org.hibernate.SQL: DEBUG
 
+DATABASE_TO_UPPER: false

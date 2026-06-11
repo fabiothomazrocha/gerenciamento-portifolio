@@ -11,6 +11,8 @@ import org.springframework.beans.factory.annotation.Autowired;
         uses = {MembroMapper.class},
         injectionStrategy = InjectionStrategy.CONSTRUCTOR)
 public abstract class ProjetoMapper {
+    @Autowired
+    protected CalculadorRisco riscoCalculator;
 
     @Mapping(target = "id", ignore = true)
     @Mapping(target = "status", ignore = true)
